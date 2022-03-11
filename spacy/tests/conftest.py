@@ -100,11 +100,6 @@ def de_vocab():
 
 
 @pytest.fixture(scope="session")
-def dsb_tokenizer():
-    return get_lang_class("dsb")().tokenizer
-
-
-@pytest.fixture(scope="session")
 def el_tokenizer():
     return get_lang_class("el")().tokenizer
 
