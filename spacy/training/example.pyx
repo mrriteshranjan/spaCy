@@ -263,11 +263,11 @@ cdef class Example:
         kept. Otherwise only the character indices need to match.
         """
         gold = {}
-        for ent in self.reference.ents:
+        for ent in self.reference:
             gold[(ent.start_char, ent.end_char)] = ent.label
 
         keep = []
-        for ent in self.predicted.ents:
+        for ent in self.predicted:
             key = (ent.start_char, ent.end_char)
             if key not in gold:
                 continue
